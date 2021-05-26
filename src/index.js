@@ -1,11 +1,14 @@
 import _ from 'lodash';
 import path from 'path';
 import fs from 'fs';
+import parse from './parsers.js';
 
 const getFileData = (filepath) => {
-  const absolutePath = path.resolve(process.cwd(), filepath);
-  const data = JSON.parse(fs.readFileSync(absolutePath));
-  return data;
+  const absolutePath = path.resolve(process.cwd(), '__fixtures__', filepath);
+  // console.log(absolutePath);
+  const data = fs.readFileSync(absolutePath);
+  const format = path.extname(filepath);
+  return parse(data, format);
 };
 
 const genDiff = (filepath1, filepath2) => {
