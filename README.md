@@ -20,20 +20,20 @@ Clone this repository and run:
 ```
 $ gendiff file1.json file2.json
 ```
-**flat JSON files (bold)**
+**flat JSON files**
 [![asciicast](https://asciinema.org/a/2UQ5Gnppm5wNEf3wAl3bUT1ya.svg)](https://asciinema.org/a/2UQ5Gnppm5wNEf3wAl3bUT1ya)
 
-**recursive JSON files (bold)**
+**recursive JSON files**
 [![asciicast](https://asciinema.org/a/hT37WDEWoQ2CTIGyIxMJXFzYP.svg)](https://asciinema.org/a/hT37WDEWoQ2CTIGyIxMJXFzYP)
 
 ## Compare YAML files
 ```
 $ gendiff file1.yml file2.yml
 ```
-**flat YAML files (bold)**
+**flat YAML files**
 [![asciicast](https://asciinema.org/a/0Gna8CegvOHYfxYvQqLqBbOfi.svg)](https://asciinema.org/a/0Gna8CegvOHYfxYvQqLqBbOfi)
 
-**recursive YAML files (bold)**
+**recursive YAML files**
 [![asciicast](https://asciinema.org/a/zsPK0lRahMmGOrUeHzo7Ug9OB.svg)](https://asciinema.org/a/zsPK0lRahMmGOrUeHzo7Ug9OB)
 
 ## Compare with plain formatter
