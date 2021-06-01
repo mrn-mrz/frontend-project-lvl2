@@ -8,7 +8,7 @@ const stringify = (value) => {
   return typeof value === 'string' ? `'${value}'` : value;
 };
 
-const renderPlain = (diff) => {
+const plainFormatter = (diff) => {
   const iter = (tree, path) => tree.flatMap((node) => {
     const {
       name, value, newValue, status, children,
@@ -36,4 +36,4 @@ const renderPlain = (diff) => {
   return iter(diff, []).join('\n');
 };
 
-export default renderPlain;
+export default plainFormatter;

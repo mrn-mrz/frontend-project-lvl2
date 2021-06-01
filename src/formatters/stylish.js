@@ -21,7 +21,7 @@ const stringify = (value, depth) => {
   return `{\n${innerPart.join('\n')}\n${braceIndent}  }`;
 };
 
-const stylish = (diff) => {
+const stylishFormatter = (diff) => {
   const iter = (depth, node) => node.flatMap((child) => {
     const {
       name, value, status, newValue, children,
@@ -50,4 +50,4 @@ const stylish = (diff) => {
   return `{\n${innerPart.join('\n')}\n}`;
 };
 
-export default stylish;
+export default stylishFormatter;
