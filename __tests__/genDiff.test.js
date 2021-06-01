@@ -13,10 +13,12 @@ const json = getData('json.txt');
 test.each([
   ['.json'],
   ['.yml'],
-])('gendiff with each formats', (ext) => {
+])('gendiff with each formats and formatters', (ext) => {
   const first = pathToFile(`file1${ext}`);
   const second = pathToFile(`file2${ext}`);
+
   expect(genDiff(first, second)).toEqual(stylish);
   expect(genDiff(first, second, 'plain')).toEqual(plain);
   expect(genDiff(first, second, 'json')).toEqual(json);
+  expect(() => genDiff(first, second, 'unknown')).toThrow();
 });

@@ -38,10 +38,8 @@ const stylishFormatter = (diff) => {
         return `${indent}+ ${name}: ${stringify(value, nextLevelDepth)}`;
       case 'removed':
         return `${indent}- ${name}: ${stringify(value, nextLevelDepth)}`;
-      case 'unchanged':
-        return `${indent}  ${name}: ${value}`;
       default:
-        throw new Error('Unexpected condition. Please check the input data.');
+        return `${indent}  ${name}: ${value}`;
     }
   });
 
